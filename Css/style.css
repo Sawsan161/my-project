@@ -1,0 +1,841 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* global utilitis */
+.title {
+    text-align: center;
+}
+h3{
+    font-size: 50px;
+    text-transform: capitalize;
+}
+.border {
+    margin: auto;
+    margin-top: 20px;
+    background-color: #6759e6;
+    width: 120px;
+    height: 5px;
+}
+.container{
+    width: 85%;
+    margin: auto;
+  } 
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color:rgba(0,0,0,0.5) ;
+} 
+.row {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+   
+}
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/* ^=======================home ============== */
+.home {
+    position: relative;
+    height: 100vh;
+    background: url(../imag/front-view-elegant-perfume-colored-flowers-light-blue-background_140725-144930.jpg) no-repeat ;
+    background-size: cover;
+}
+.home .navbar {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 60px;
+    background-color: #8595c9a4;
+ 
+}
+.home .navbar .navbar-content {
+    margin-top: 15px;
+}
+.home .navbar .home-logo{
+    margin-left: 30px;
+    float: left;
+    position: relative;
+}
+.home .navbar .home-icon {
+    color: white;
+    font-size: 28px;
+}
+.home .navbar .search{
+border-radius: 50px;
+outline: none;
+border: none;
+width: 300px;
+height: 35px;
+margin-left: 30px;
+
+}
+.home .navbar .search-icon {
+    position: absolute;
+    left: 80px;
+    bottom: 8px;
+}
+.home .navbar .icons {
+    float: right;
+    width: 50%;
+}
+.home .navbar .icons ul {
+ list-style: none;
+
+}
+.home .navbar .icons li {
+    float: left;
+    margin-left: 35px;
+    position: relative;
+    
+} 
+.home .navbar .icons li::after {
+    content: "";
+    position: absolute;
+    transition: 0.5s;
+    width: 0;
+    height: 3px;
+    left: 0;
+    top:30px;
+    background-color: #513ff0;
+}
+.home .navbar .icons li:hover::after{
+    width: 100%;
+}
+.home .navbar .icons a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    font-size:20px;
+}
+.blog {
+    position: relative;
+}
+.blog:hover .ul-blog {
+    display: block;
+}
+.ul-blog {
+    width: 180px;
+    height: 150px;
+    position: absolute;
+    top: 45px;
+    text-align: center;
+    background-color: #6274AE;
+    padding-top: 20px;
+    border-radius: 10px;
+    display: none;
+}
+.ul-blog li {
+    margin-bottom: 15px
+
+}
+/*-----------------------header------- */
+.header {
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.header h2 {
+    color: white;
+    font-size: 80px;
+  
+    text-transform:uppercase;
+}
+.header p {
+    font-size: 18px;
+    margin: 20px 0;
+    letter-spacing: 2.5px;
+    color: #d8d5d5;
+    font-weight: bold;
+}
+/* ----------------------- button*/
+.btn {
+    width: 170px;
+    height: 70px;
+    text-transform: capitalize;
+    border-radius: 15px;
+    font-size: 20px;
+    border: none;
+}
+.header .start {
+    background-color: #6274AE;
+    color: white;
+}
+.header .btn:hover {
+     opacity: 0.7;
+
+}
+
+/* * ********************** section welcome */
+
+.welcome-section {
+    height: 100vh;
+   margin-top: 100px;
+}
+
+.welcome-card{
+  margin-top: 100px; 
+  margin-left: 40px; 
+}
+.card {
+    float: left;
+    position: relative;
+    width: 30%;
+    height: 280px;
+    border: 1px solid #6759e6;
+    border-radius: 15px;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+ .m-card {
+   margin-left: 5%;
+   margin-right: 5%;
+}
+.welcome-section .card i {
+    margin-top: 25px;
+    font-size: 40px;
+    color: #6759e6c4;
+    margin-bottom: 20px;
+}
+.welcome-section .card h4 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+.welcome-section .card  p {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #777;
+}
+.welcome-section .card  button,
+.recent-news button {
+    color: #5647dd;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    margin-top: 18px;
+    text-transform: capitalize;
+    background-color: inherit;
+
+}
+ .card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #5647dd83;
+    transition: 0.5s;
+}
+ .card:hover:after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+.card:hover .card-content {
+    position: absolute;
+    z-index: 3;
+}
+.card:hover h4 {
+    color: #f6f5fa;
+}
+.card:hover p,
+.offer .card:hover p {
+    color: black;
+}
+.card:hover button,
+.card:hover i,
+.offer .card:hover h4   {
+    color: blue;
+}
+/* ******************************** featured */
+.featured {
+    background-color: #E8EAF8;
+   height: 100vh;
+   padding-top: 50px; 
+}
+.featured .container {
+    width: 80%;
+}
+.featured .gallary {
+    margin-top: 50px;
+}
+.featured .gallary  .card-f{
+    width: 380px;
+    height: 250px;
+    float: left;
+    position: relative;
+    margin-left:40px ;
+    margin-bottom: 40px;
+   
+}
+.featured .gallary img {
+    width: 100%;
+    height: 250px;
+
+}
+.featured .gallary .img-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-color:rgba(0,0,0,0.5) ;
+    text-align: center;
+    display: none;
+    transition: 0.1s;
+
+}
+.featured .gallary .card-f:hover .img-content {
+  display: block;
+}
+
+.featured .gallary .img-content h4 {
+    font-size: 40px;
+    color: #d6c8c89a;
+   text-transform: uppercase;
+   margin-top: 40px;
+  
+}
+.featured .gallary .img-content P {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 30px;
+  
+}
+.featured .gallary .img-content button{
+    width: 50px;
+    height: 40px;
+    border-radius: 7px;
+    margin-top: 25px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.featured .gallary .img-content i {
+ font-size: 25px;
+ color: #7c7777;
+}
+
+.featured .gallary .second-card {
+    margin-bottom: 50px;
+}
+/* ******************************** what we offer*/
+.offer {
+    margin-top: 50px;
+    height: 100vh;
+    padding-bottom: 50px;
+    overflow: hidden;
+}
+.offer .card {
+    margin-bottom: 50px;
+    text-align: left;
+    width: 26%;
+    height: 250px;
+    margin-left: 80px;
+    padding: 30px 15px;
+}
+.offer .card a {
+    float: left;
+    display: block;
+    margin-right: 10px;
+    height: 100%;
+    text-decoration: none;
+}
+.offer .card h4 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.offer .card p {
+   font-size: 20px;
+   color: #7c7777;
+}
+.offer .card a i {
+    font-size: 40px;
+}
+
+/* * *************************why we choose */
+.why-choose {
+   height: 100vh;
+    padding-top: 100px;
+}
+.why-choose .content {
+    float: left;
+    width: 50%;
+    padding-top: 30px;
+}  
+.why-choose .title {
+    text-align: left;
+    margin-bottom: 40px;
+}
+.why-choose .border {
+    margin-left: 0;
+    width: 80px;
+}
+.why-choose .first-p {
+    font-size: 20px;
+    color: #7c7777;
+    margin-bottom: 20px;
+}
+.why-choose .line  {
+    font-size: 22px;
+    line-height: 3;
+    margin-bottom: 20px;
+}
+.why-choose .line i {
+    color: #5647dd;
+    margin-top: 20px;
+    float: left;
+}
+.why-choose .line p {
+    color: #474444;
+}
+.why-choose  .img {
+    width: 40%;
+    float: right;
+    text-align: center;
+    position: relative;
+}
+.why-choose  .img img {
+width: 80%;
+display: inline-block;
+margin: 0 auto;
+}
+.why-choose  .img .rounded {
+    margin-top: 10px;
+}
+.rounded ul {
+    display: inline-block; 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    text-align: center; /
+}
+.why-choose  .img .active {
+    background-color: #a198f1;
+}
+.why-choose  .img li{
+    display: inline-block;
+    list-style: none;
+    width: 18px;
+    height: 18px;
+    background-color:#777 ;
+    border-radius: 50%;
+  
+    margin-left: 20px;
+ 
+}
+.why-choose  .img li:hover {
+    background-color: #a198f1;
+}
+
+/* ^ ************************** static */
+.static {
+    margin-top: 50px;
+    position: relative;
+    background: url("../imag/choose.jpg") no-repeat fixed;
+    background-size:  cover;
+    height: 60vh;
+  
+}
+.offer::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.static .count {
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin-bottom: 20px;
+}   
+.static .count i {
+    color: #979def;
+    font-size: 50px;  
+    display: block;
+    margin-bottom: 10px;
+}
+.static .count span {
+  font-size: 25px;
+  color: #fff;
+}
+.static .count p {
+    font-size: 20px;
+    color: #fff;
+}
+
+/* * ****************** pricing *********** */
+.pricing-section {
+    height: 100vh;
+    padding-top: 50px;
+}
+.pricing-content {
+    height: 600px;
+    margin: auto;
+}
+.pricing-content .card  {
+    border: 1px solid #513ff0;
+    float: left;
+    width: 25%;
+    height: 500px;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-left: 90px;
+    text-align: center;
+    position: relative;
+    transition: 0.5s;
+}
+.pricing-content .card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 0;
+    background-color: rgba(86, 71, 221, 0.514);
+}
+.pricing-content .card:hover:after {
+    height: 100%;
+    z-index: -1;
+}
+
+.pricing-content h4{
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.pricing-content:hover h4{
+    color: #513ff0;
+}
+.pricing-content:hover .price {
+    border: 3px solid #513ff0;
+}
+.card-m {
+    margin-left: 90px;
+}
+.pricing-content .price {
+    margin: auto;
+    border: 3px solid #7466eec4;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+}
+.pricing-content .price .price-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pricing-content .sp1 {
+    font-size: 30px;
+    font-weight: bolder;
+}
+.price-info {
+    text-transform: capitalize;
+     margin-top: 30px;
+}
+.price-info p  {
+    line-height: 2.5;
+    font-size: 20px;
+}
+
+.price-info button {
+    width: 60%;
+    height: 40px;
+    outline: none;
+    border-radius: 20px;
+    color: black;
+    margin-top: 20px;
+    border: 3px solid #7466eec4;
+}
+.price-info a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    text-transform: capitalize;
+}
+
+/* * ****************** markting -content creator* */
+.section-pos {
+    background: url('../imag/front-view-cologne-bottle-rotten-tree-branch-isolated-light-blue-background_140725-145204.jpg') no-repeat fixed;
+    background-size:  cover;
+    height: 60vh;
+   position: relative;
+}
+
+.section-markting {
+    width: 80%;
+    margin-left: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.section-markting .markting{
+    float: left;
+    width: 45%;
+     margin-left: 50px;
+   
+}
+.section-markting .markting-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+.section-markting .markting-img  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.section-markting  .markting-title {
+    text-transform: capitalize;
+    display: inline-block;
+    margin-top: 30px;
+   
+} 
+.section-markting h4 {
+    color: #fff;
+    font-size: 40px;
+
+ }
+ .section-markting .markting-title p {
+    color: blue;
+    font-size: 22px;
+ }
+
+.section-markting  .para{
+    margin-top: 40px;
+    font-size: 20px;
+    line-height: 1.5;
+    text-transform: capitalize;
+} 
+
+/* * ****************** our team *********** */
+ .our-team {
+  overflow: hidden;
+  height: 100vh; 
+  padding-top: 50px;
+}
+.content-team {
+    margin-top: 50px;
+}
+.our-team .content-team .team-card {
+background-color:#d8d5d5;
+width: 30%;
+height: 400px;
+float: left;
+padding: 20px;
+text-align: center;
+border-radius: 20px;
+position: relative;
+}
+.our-team .content-team .team-card::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background: rgba(98, 84, 228, 0.411);
+    transition: 0.5s;
+    z-index: 3;
+    border-radius: 20px;
+}
+.our-team .content-team .team-card:hover:after {
+    width: 100%;
+    height: 100%;
+}
+.our-team .content-team .team-card:hover h4 {
+    color: #fff;
+}
+.our-team .content-team .team-card:hover p {
+    color: blue;
+} 
+.our-team .content-team .team-card .img-card {
+    width: 85%;
+    height: 250px;
+    margin: auto;
+    position: relative;
+}
+.our-team .content-team .team-card  img{
+width: 100%;
+height: 100%;
+}
+.our-team a {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    color:#fff ;
+    margin-bottom: 10px;
+    position: relative;
+    left: 88%;
+    text-align: center;
+}
+.our-team .content-team .team-card:hover a {
+    display: block;
+}
+.our-team .content-team .team-card i { 
+   line-height: 40px;
+}
+.our-team .card-content {
+    text-transform: capitalize;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+.our-team h4 {
+font-size: 30px;
+} 
+.our-team p {
+    font-size: 20px;
+color: #474747;
+}
+/* * ****************** recent News*********** */
+.recent-news {
+    height: 100vh;
+    text-align: center;
+    margin-bottom: 50px;
+   
+}
+.recent-news .card {
+    height: 600px;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.recent-news .img {
+    width: 80%;
+    height: 350px;
+    margin: auto;
+    position: relative;
+}
+.recent-news .img img {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+.recent-news .social {
+    position: absolute;
+    bottom: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+.recent-news .social-icon {
+    float: left;
+    width: 30%;
+}
+.recent-news .social-icon i {
+    font-size: 20px;
+    color: #513ff0;  
+}
+.recent-news .social-icon span {
+    font-size:20px;
+}
+.recent-news .card-content {
+    margin-top: 15px;
+}
+/* .recent-news .card-content .card-info {
+    margin-top: 20px ;
+} */
+.recent-news .card-inner h5 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.recent-news .card-content p {
+    font-size: 21px;
+    color: rgb(90, 88, 88);
+    text-transform: none;
+}
+.recent-news .card:hover:after {
+    z-index: -1;
+}
+.recent-news .card:hover span,
+.recent-news .card:hover p {
+    color: blue;
+}
+.recent-news .card:hover h5 {
+    color: #fff;
+}
+
+
+/* * ****************** footer *********** */
+.footer {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-color: #d1d3f0;
+    padding: 50px 0;
+}
+.footer-img {
+   margin: auto;
+    width: 350px;
+    margin-bottom: 10px;
+}
+.footer-img img {
+    width: 100%;
+    border-radius: 20px;
+}
+.footer-media {
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+}
+.footer-sochial{
+ position: relative;
+ display: inline-block;
+ width: 70px;
+ height: 70px;
+ background-color: #9d95ec;
+ border-radius: 50%;
+ text-align: center;
+ transition: 0.5s;
+}
+.footer-sochial:hover {
+    background-color: #5647dd;
+}
+.footer-sochial i {
+    font-size: 35px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.footer p {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+    color:  rgb(100, 99, 99);
+    text-transform: uppercase;
+}
+
